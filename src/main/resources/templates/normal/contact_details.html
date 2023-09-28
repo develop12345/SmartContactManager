@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+<section>
+<div class="card ms-md-4 me-md-4">
+<div th:if="${contact}"  class="card-body">
+<div th:if="${session.message}" th:classappend="${session.message.type}" class="container text-center alert mb-2 mt-2">
+<p th:text="${session.message.content}"></p>
+<th:block th:text="${@sessionHelper.RemoveMessageFromSession()}"></th:block>
+</div>
+<div class="container text-center">
+   <img style="height: 200px; width: 200px;" src="" th:src="@{'/img/'+${contact.image}}" alt="pic"></img>
+   <h2 class="md-4" th:text="${contact.name}"></h2>
+   <table class="table mt-5">
+   <tr>
+     <th>Nick Name</th>
+     <td th:text="${contact.nickname}"></td>
+     </tr>
+    <tr>
+     <th>Email</th>
+     <td th:text="${contact.email}"></td>
+     </tr>
+     <tr>
+     <th>Phone no.</th>
+     <td th:text="${contact.phone}"></td>
+     </tr>
+     <tr>
+     <th>Work</th>
+     <td th:text="${contact.work}"></td>
+     </tr>
+     <tr>
+     <th>Description</th>
+     <td th:text="${contact.description}"></td>
+     </tr>
+   </table>
+   <div  class="container mt-5 d-flex">
+   <form th:action="@{'/user/update/'+${contact.cId}}" method="post">
+      <button type="submit" class="btn  btn-primary">Update</button>
+      </form>
+      <button type="button" th:onclick="|dltbtn(${contact.cId})|" class="btn  btn-danger">Delete</button>
+      </div>
+</div>
+</div>
+<h1 class="text-center bg-danger" th:unless="${contact}">YOU DON'T HAVE PERSMISSION TO ACCESS THIS CONTACT INFO</h1>
+</div>
+</section>
+</body>
+</html>

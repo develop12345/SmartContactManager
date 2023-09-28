@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+<section class="col-md-6 offset-md-3 mt-4 p-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+<h1 class="text-center mb-4">LOGIN</h1>
+<form th:action="@{/dologin}" method="post">
+<div th:if="${param.error}" class="alert alert-danger">
+Invalid username or  password
+</div>
+<div th:if="${param.logout}" class="alert alert-success">
+Logged out !!
+</div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input 
+    type="email"
+     class="form-control"
+      id="exampleInputEmail1" 
+      name="username"
+      aria-describedby="emailHelp">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+     type="password"
+      class="form-control"
+      name="password"
+       id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    
+  </div>
+  <div class="container">
+  <button type="submit" class="btn btn-success">Login</button>
+  <a th:href="@{/signup}" class="btn btn-warning text-md-end" style="float:right;">Signup</a>
+  </div>
+</form>
+</section>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+<section>
+<div class="card ms-md-4 me-md-4">
+<div class="card-body">
+
+<div class="container text-center">
+  
+   <h2 class="md-4" th:text="${user.name}"></h2>
+  <table class="table mt-5">
+    <tr>
+     <th>Email</th>
+     <td th:text="${user.email}"></td>
+     </tr>
+  
+     <tr>
+     <th>Role</th>
+     <td th:text="${user.role}"></td>
+     </tr>
+     <tr>
+     <th>About</th>
+     <td th:text="${user.about}"></td>
+     </tr>
+   </table>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
