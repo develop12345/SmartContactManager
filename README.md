@@ -30,6 +30,9 @@ Click the "Save" button to add the contact.
 After adding contacts, you can view them by clicking on the "View Contacts" option.
 You will see a list of your contacts, and you can perform actions like editing or deleting them.
 
+# ER Diagram
+![smartcontact-er-diagram](https://github.com/develop12345/SmartContactManager/assets/91689045/c1a863b9-8baf-47be-99bc-08e3f14bec67)
+
 ## Screenshots 
 
 # Home Screen
@@ -48,7 +51,7 @@ You will see a list of your contacts, and you can perform actions like editing o
 ![Add Contact](https://github.com/develop12345/SmartContactManager/assets/91689045/1895d6a0-e403-4a10-b3f6-74ebc9fb4a57)
 
 # View Contact
-![view](https://github.com/develop12345/SmartContactManager/assets/91689045/56ede311-9290-4089-90e6-9bcbc2a9a223)
+![viewpage](https://github.com/develop12345/SmartContactManager/assets/91689045/177556f7-7d8d-460a-9417-77d000eb252e)
 
 # Update Contact
 ![viewcontactpagge](https://github.com/develop12345/SmartContactManager/assets/91689045/81f7f631-e0d2-40be-a083-79756f764d3e)
